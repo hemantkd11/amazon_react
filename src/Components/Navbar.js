@@ -50,7 +50,7 @@ function Navbar() {
               className="text-1"
               onClick={() => Navigate("/amazon_react/login")}
             >
-              Hell, Sign in
+              He, Sign in
             </p>
             <p className="text">Guest</p>
           </div>
