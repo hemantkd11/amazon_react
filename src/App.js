@@ -20,7 +20,7 @@ function App() {
       <Container>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/amazon_ui/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/address" element={<Address />} />
           <Route path="/payment" element={<Payment />} />
