@@ -20,14 +20,14 @@ function App() {
       <Container>
         <Navbar />
         <Routes>
-          <Route path="/amazon_ui/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/address" element={<Address />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/order" element={<OrderPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/confirm" element={<Confirm />} />
+          <Route path="/amazon_react/" element={<Home />} />
+          <Route path="/amazon_react/login" element={<Login />} />
+          <Route path="/amazon_react/address" element={<Address />} />
+          <Route path="/amazon_react/payment" element={<Payment />} />
+          <Route path="/amazon_react/order" element={<OrderPage />} />
+          <Route path="/amazon_react/checkout" element={<CheckoutPage />} />
+          <Route path="/amazon_react/signup" element={<Signup />} />
+          <Route path="/amazon_react/confirm" element={<Confirm />} />
         </Routes>
       </Container>
     </Router>
