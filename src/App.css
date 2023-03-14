@@ -228,22 +228,6 @@ a{
   width: 100px;
   margin-top: 10px;
 }
-.basket-Btn {
-  display: flex;
-  align-items: center;
-  height: 90%;
-}
-
-.basket-Btn img {
-  width: 30px;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  background-color: #61dafb;
-}
-.basket-Btn p {
-  color: white;
-  font-size: 30px;
-}
 .search {
   height: 35px;
   flex: 1;
@@ -275,12 +259,29 @@ a{
   cursor: pointer;
   margin-right: 15px;
 }
-.col1 text-1 {
+.col1 .text-1 {
   font-size: 12px;
 }
-.col1 text-2 {
+.col1 .text-2 {
   font-size: 14px;
   font-weight: 600;
+}
+.basket-Btn {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  height: 90%;
+  color: white;
+}
+.basket-Btn img {
+  width: 30px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  background-color: #61dafb;
+}
+.basket-Btn p {
+  color: white;
+  font-size: 20px;
 }
 
 .footer-Container {
