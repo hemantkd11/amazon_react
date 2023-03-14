@@ -296,6 +296,7 @@ a{
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 }
 .Back-to-top {
   width: 100%;
@@ -363,7 +364,8 @@ a{
   padding: 0;
 }
 .text-1 {
-  font-size: 1vw;
+  width: 100%;
+  font-size: 10px;
 }
 
 .banner img {
@@ -390,12 +392,7 @@ a{
   grid-gap: 20px;
   border: none;
 }
-@media screen and (max-width: 768px) {
-  .main {
-    grid-template-columns: repeat(2, 50%);
-    grid-gap: 0px;
-  }
-}
+
 .card {
   width: 100%;
   height: 100%;
@@ -405,7 +402,6 @@ a{
   border: none;
   z-index: 10;
 }
-
 .image {
   width: 100%;
   display: flex;
@@ -416,6 +412,9 @@ a{
 .image img {
   width: 180px;
   height: 200px;
+}
+.details {
+  height: 160px;
 }
 .details h3 {
   font-size: 15px;
@@ -434,7 +433,29 @@ a{
   background-color: goldenrod;
   border-radius: 20px;
 }
-
+@media screen and (max-width: 1000px) {
+  .main {
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 0px;
+  }
+  .image img {
+    width: 150px;
+    height: 200px;
+  }
+  .details {
+    height: 160px;
+  }
+  .details h3 {
+    font-size: 12px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 0px;
+  }
+}
 .checkOut-container {
   background-color: rgb(209, 203, 203);
   width: 100%;
