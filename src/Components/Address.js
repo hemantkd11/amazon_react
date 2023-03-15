@@ -32,7 +32,17 @@ const Address = () => {
         landmark,
       },
     });
-    Navigate("/payment");
+    if (
+      fullname == "" &&
+      phone == "" &&
+      home == "" &&
+      town == "" &&
+      landmark == ""
+    ) {
+      alert("please fill all the fields");
+    } else {
+      Navigate("/amazon_react/payment");
+    }
   };
 
   return (
