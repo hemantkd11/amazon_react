@@ -38,7 +38,7 @@ function Navbar() {
       <div className="Navbar">
         <div className="logo">
           <img
-            src="./amazon-smile.png"
+            src="./amazon_react/amazon-smile.png"
             onClick={() => Navigate("/amazon_react/")}
           />
         </div>

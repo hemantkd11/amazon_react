@@ -11,6 +11,7 @@ import Payment from "./Components/payment";
 import Signup from "./Components/Signup";
 import Navbar from "./Components/Navbar";
 import Confirm from "./Components/confirm_page";
+import Footer from "./Components/footer";
 // import Navbar from './Mainfile/Navbar'
 // import Profile from './Mainfile/profile';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/amazon_react/signup" element={<Signup />} />
           <Route path="/amazon_react/confirm" element={<Confirm />} />
         </Routes>
+        <Footer />
       </Container>
     </Router>
   );
