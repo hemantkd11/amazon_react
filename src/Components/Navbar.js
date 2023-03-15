@@ -29,6 +29,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../context";
 import AddCard from "@mui/icons-material/AddShoppingCart";
+import { padding, textAlign } from "@mui/system";
 function Navbar() {
   const [{ basket }] = useStateValue();
   const Navigate = useNavigate();
@@ -62,8 +63,19 @@ function Navbar() {
             className="basket-Btn"
             onClick={() => Navigate("/amazon_react/checkout")}
           >
-            <AddCard />
-            <p className="text">{basket.length}</p>
+            <div className="cart-logo">
+              <AddCard />
+            </div>
+            <div
+              className="basket_count"
+              style={{
+                backgroundColor: "black",
+                color: "red",
+                textAlign: "center",
+              }}
+            >
+              {basket.length}
+            </div>
           </div>
         </div>
       </div>
