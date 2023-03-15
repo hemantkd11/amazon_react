@@ -42,7 +42,9 @@ const Card = ({ id, image, price, title, rating }) => {
         <p>₹ {price}</p>
       </div>
       <div className="card-btn">
-        <button onClick={addToBasket}>Add to Card</button>
+        <button onClick={addToBasket} className="btn_active">
+          Add to Card
+        </button>
       </div>
     </div>
   );
