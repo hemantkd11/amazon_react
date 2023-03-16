@@ -98,7 +98,6 @@ const Payment = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

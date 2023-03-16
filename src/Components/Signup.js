@@ -60,14 +60,13 @@ const Signup = () => {
         <div className="New-Account">
           <button
             type="button"
-            onClick={() => Navigate("/login")}
+            onClick={() => Navigate("/amazon_react/login")}
             className="createNew-acc-btn"
           >
             Already Have Account / Go Back To Login
           </button>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

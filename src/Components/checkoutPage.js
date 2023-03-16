@@ -77,7 +77,6 @@ const CheckoutPage = () => {
           </button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -1,55 +1,45 @@
-
-export const initialState={
-    basket:[],
-    user:null,
-    address:{}
+export const initialState = {
+  basket: [],
+  user: null,
+  address: [],
 };
-export const  getBasketTotal = (basket) => basket.reduce((total,items)=> items.price + total,0)
+export const getBasketTotal = (basket) =>
+  basket.reduce((total, items) => items.price + total, 0);
 
+const reducer = (state = initialState, action) => {
+  console.log("action", action);
 
+  switch (action.type) {
+    case "Add_to_basket":
+      return {
+        ...state,
+        basket: [...state.basket, action.items],
+      };
 
-const reducer = (state=initialState,action)=>{
-    console.log('action',action)
+    case "REMOVE_ITEM":
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.id
+      );
 
-    switch(action.type){
+      let newBasket = [...state.basket];
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(`cant remove produnt ${index}`);
+      }
 
+      return {
+        ...state,
+        basket: newBasket,
+      };
+    case "Set_address":
+      return {
+        ...state,
+        address: [...state.items, action.items],
+      };
 
-
-             case 'Add_to_basket':
-                return {
-                     ...state,
-                     basket:[...state.basket,action.items]
-               }
-
-
-
-            
-            case "REMOVE_ITEM":
-               
-                const index = state.basket.findIndex(
-                     (basketItem)=>basketItem.id === action.id
-                )
-
-                let newBasket = [...state.basket];
-                if(index >= 0){
-                     newBasket.splice(index,1)
-                }else{
-                    console.warn(`cant remove produnt ${index}`)
-                }
-
-                return {
-                     ...state,
-                     basket: newBasket
-                }
-                case "Set_address":
-                    return {
-                     ...state,
-                     address:{...action.items}
-                    }
-
-                    
-            default :
-            return state
-    }
-}
-export default reducer
+    default:
+      return state;
+  }
+};
+export default reducer;

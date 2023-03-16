@@ -30,6 +30,7 @@ import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../context";
 import AddCard from "@mui/icons-material/AddShoppingCart";
 import { padding, textAlign } from "@mui/system";
+import Dropdown from "./Dropdown";
 function Navbar() {
   const [{ basket }] = useStateValue();
   const Navigate = useNavigate();
@@ -43,10 +44,12 @@ function Navbar() {
           />
         </div>
         <div className="search">
-          <input type="search" placeholder="Search" />
+          <form className="input_src_form">
+            <input type="search" placeholder="Search" name="search" />
+          </form>
         </div>
         <div className="right-Container">
-          <div className="col1">
+          <div className="col1 sign-in-conatiner">
             <p
               className="text-1"
               onClick={() => Navigate("/amazon_react/login")}
@@ -54,6 +57,7 @@ function Navbar() {
               Hi, Sign in
             </p>
             <p className="text">Guest</p>
+            <Dropdown />
           </div>
           <div className="col1">
             <p className="text-1">Retur</p>
