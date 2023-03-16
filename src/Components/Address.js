@@ -40,6 +40,7 @@ const Address = () => {
       landmark == ""
     ) {
       alert("please fill all the fields");
+      Navigate("/amazon_react/");
     } else {
       Navigate("/amazon_react/payment");
     }
