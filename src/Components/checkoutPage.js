@@ -27,7 +27,6 @@ const CheckoutPage = () => {
     }
   };
 
-  console.log("checkout>>>>", basket);
   return (
     <div className="checkOut-container">
       <div className="checkout-main">

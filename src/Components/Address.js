@@ -119,7 +119,6 @@ const Address = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
